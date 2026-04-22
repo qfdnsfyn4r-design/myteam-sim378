@@ -1,0 +1,39 @@
+body{
+  font-family: Arial;
+  background:#0a0a0a;
+  color:white;
+  text-align:center;
+}
+
+.topbar{
+  background:#111;
+  padding:10px;
+}
+
+button{
+  padding:8px;
+  margin:5px;
+  background:gold;
+  border:none;
+  border-radius:6px;
+}
+
+.card{
+  display:inline-block;
+  width:160px;
+  margin:5px;
+  padding:10px;
+  border-radius:10px;
+}
+
+.Basic{background:#555}
+.Rare{background:#1e90ff}
+.Legendary{background:#ff8c00}
+.Golden{background:gold;color:black}
+.Platinum{background:silver;color:black}
+.Ruby{background:crimson}
+.Sapphire{background:#0ff;color:black}
+.Amethyst{background:purple}
+.Diamond{background:#87cefa;color:black}
+.RedDiamond{background:#8b0000}
+.BlackDiamond{background:black;border:2px solid cyan}

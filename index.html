@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>MyTEAM Sim</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
+
+<!-- iOS PWA support -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" href="icon.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>🏀 MyTEAM Sim</h1>
+
+<div class="topbar">
+VC: <span id="vc"></span>
+<button onclick="manualSave()">Save</button>
+</div>
+
+<div class="tabs">
+<button onclick="tab('packs')">Packs</button>
+<button onclick="tab('collection')">Collection</button>
+<button onclick="tab('market')">Market</button>
+</div>
+
+<div id="packs"></div>
+<div id="collection" style="display:none"></div>
+<div id="market" style="display:none"></div>
+
+<script src="players.js"></script>
+<script src="game.js"></script>
+
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+</html>
