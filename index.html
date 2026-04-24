@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
 <title>MyTEAM Sim</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#000000">
 
-<!-- PWA (iOS + Android install support) -->
 <link rel="manifest" href="manifest.json">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="apple-touch-icon" href="icon.png">
 
 <link rel="stylesheet" href="style.css">
@@ -21,50 +18,31 @@
 
 <h1>🏀 MyTEAM Sim</h1>
 
-<!-- TOP BAR -->
 <div class="topbar">
   VC: <span id="vc">0</span>
   <button onclick="manualSave()">Save</button>
 </div>
 
-<!-- SIMPLE NAV -->
 <div class="tabs">
   <button onclick="show('packs')">🎁 Packs</button>
   <button onclick="show('collection')">📦 Collection</button>
   <button onclick="show('market')">🏪 Market</button>
 </div>
 
-<!-- ===================== -->
-<!-- PACKS -->
-<!-- ===================== -->
 <div id="packs" class="page"></div>
-
-<!-- ===================== -->
-<!-- COLLECTION -->
-<!-- ===================== -->
 <div id="collection" class="page" style="display:none"></div>
-
-<!-- ===================== -->
-<!-- MARKET -->
-<!-- ===================== -->
 <div id="market" class="page" style="display:none"></div>
 
-<!-- SCRIPTS -->
 <script src="players.js"></script>
 <script src="game.js"></script>
 
-<!-- PWA SERVICE WORKER -->
-<script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js");
-}
-</script>
-
-<!-- SIMPLE TAB SWITCH -->
 <script>
 function show(tab){
-  document.querySelectorAll(".page").forEach(p => p.style.display="none");
+  document.querySelectorAll(".page").forEach(p=>p.style.display="none");
   document.getElementById(tab).style.display="block";
+}
+if("serviceWorker" in navigator){
+  navigator.serviceWorker.register("service-worker.js");
 }
 </script>
 
