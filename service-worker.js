@@ -2,11 +2,7 @@ self.addEventListener("install", e=>{
   e.waitUntil(
     caches.open("myteam").then(cache=>{
       return cache.addAll([
-        "./",
-        "./index.html",
-        "./game.js",
-        "./players.js",
-        "./style.css"
+        "./","./index.html","./game.js","./players.js","./style.css"
       ]);
     })
   );
